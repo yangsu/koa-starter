@@ -2,3 +2,5 @@ node_modules
 *.css
 .env
 *.sublime-workspace
+
+yarn-error.log
