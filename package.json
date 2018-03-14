@@ -24,6 +24,7 @@
     "mongoose": "^5.0.10"
   },
   "lint-staged": {
+    "*.js": ["eslint --fix", "git add"],
     "*.{js,json,css,md}": ["prettier --write", "git add"]
   },
   "devDependencies": {
