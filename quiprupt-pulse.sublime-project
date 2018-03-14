@@ -3,7 +3,7 @@
 	[
 		{
 			"path": ".",
-			"file_exclude_patterns": ["*.sublime-workspace", "*.css"]
+			"file_exclude_patterns": ["*.sublime-workspace", "*.css", "yarn.lock", "yarn-error.log"]
 		}
 	]
 }
