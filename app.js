@@ -1,14 +1,12 @@
-const config = require("./config");
+const Koa = require("koa");
+const Router = require("koa-router");
 const responseTime = require("koa-response-time");
 const logger = require("koa-logger");
-const Koa = require("koa");
 const bodyParser = require("koa-bodyparser");
 const cors = require("@koa/cors");
-const Router = require("koa-router");
-
-const router = new Router();
 
 const app = new Koa();
+const router = new Router();
 
 router.get("/", async ctx => {
   ctx.body = "Hello World";
