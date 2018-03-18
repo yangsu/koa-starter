@@ -1,11 +1,10 @@
 require("dotenv").config();
 
+const { name } = require("./package.json");
+
 const { env } = process;
 
-const appName = "project";
-
 module.exports = {
-  appName,
   port: env.PORT || 3000,
-  mongoDbUrl: env.MONGODB_URI || `mongodb://localhost/${appName}`
+  mongoDbUrl: env.MONGODB_URI || `mongodb://localhost/${name}`
 };

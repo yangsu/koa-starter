@@ -2,8 +2,9 @@
 
 const http = require("http");
 const app = require("../app");
-const { port, appName } = require("../config");
-const debug = require("debug")(`${appName}:server`);
+const { name } = require("../package.json");
+const { port } = require("../config");
+const debug = require("debug")(`${name}:server`);
 
 const server = http.createServer(app.callback());
 

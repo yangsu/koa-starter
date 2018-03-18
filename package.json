@@ -1,10 +1,10 @@
 {
-  "name": "quiprupt-pulse",
+  "name": "koa-starter",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "supervisor ./bin/www",
-    "dev": "DEBUG=quiprupt-pulse:* supervisor ./bin/www",
+    "dev": "DEBUG=koa-starter:* supervisor ./bin/www",
     "lint": "eslint . bin/www",
     "lint-fix": "eslint --fix . bin/www",
     "format": "prettier --write",
