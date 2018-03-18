@@ -2,10 +2,10 @@ require("dotenv").config();
 
 const { env } = process;
 
-const appName = "quiprupt-pulse";
+const appName = "project";
 
 module.exports = {
   appName,
   port: env.PORT || 3000,
-  mongoDbUrl: env.MONGODB_URI || "mongodb://localhost/quiprupt-pulse"
+  mongoDbUrl: env.MONGODB_URI || `mongodb://localhost/${appName}`
 };

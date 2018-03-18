@@ -3,7 +3,8 @@ const Router = require("koa-router");
 const responseTime = require("koa-response-time");
 const logger = require("koa-logger");
 const bodyParser = require("koa-bodyparser");
-const cors = require("@koa/cors");
+const compress = require("koa-compress");
+const { Z_SYNC_FLUSH } = require("zlib");
 
 const app = new Koa();
 const router = new Router();
@@ -16,7 +17,12 @@ app
   .use(logger())
   .use(responseTime())
   .use(bodyParser())
-  .use(cors())
+  .use(
+    compress({
+      threshold: 2048,
+      flush: Z_SYNC_FLUSH
+    })
+  )
   .use(router.routes())
   .use(router.allowedMethods())
   .use(ctx => {
