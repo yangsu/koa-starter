@@ -24,8 +24,9 @@
     "mongoose": "^5.0.10"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"],
-    "*.{js,json,css,md}": ["prettier --write", "git add"]
+    "bin/*": ["prettier --write", "eslint --fix", "git add"],
+    "*.js": ["prettier --write", "eslint --fix", "git add"],
+    "*.{json,css,md}": ["prettier --write", "git add"]
   },
   "devDependencies": {
     "eslint": "^4.18.2",

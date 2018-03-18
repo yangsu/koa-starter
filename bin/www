@@ -1,12 +1,15 @@
 #!/usr/bin/env node
 
+const http = require("http");
 const app = require("../app");
 const { port, appName } = require("../config");
 const debug = require("debug")(`${appName}:server`);
 
-app.listen(port);
+const server = http.createServer(app.callback());
 
-app.on("error", error => {
+server.listen(port);
+
+server.on("error", error => {
   if (error.syscall !== "listen") {
     throw error;
   }
@@ -28,8 +31,8 @@ app.on("error", error => {
   }
 });
 
-app.on("listening", () => {
-  const addr = app.address();
+server.on("listening", () => {
+  const addr = server.address();
   const bind = typeof addr === "string" ? `pipe ${addr}` : `port ${addr.port}`;
   debug(`Listening on ${bind}`);
 });
