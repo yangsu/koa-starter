@@ -3,4 +3,6 @@ node_modules
 .env
 *.sublime-workspace
 
+# use yarn instead of npm
+package-lock.json
 yarn-error.log

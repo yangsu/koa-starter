@@ -1,9 +1,13 @@
 {
-	"folders":
-	[
-		{
-			"path": ".",
-			"file_exclude_patterns": ["*.sublime-workspace", "*.css", "yarn.lock", "yarn-error.log"]
-		}
-	]
+    "folders": [
+        {
+            "file_exclude_patterns": [
+                "*.sublime-workspace",
+                "*.css",
+                "yarn.lock",
+                "yarn-error.log"
+            ],
+            "path": "."
+        }
+    ]
 }
